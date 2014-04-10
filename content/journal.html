@@ -1,0 +1,9 @@
+<% sorted_articles.each do |journal| %>
+  <div class='journal'>
+    <h1><%= link_to journal[:title], journal.path %></h1>
+    <aside>Posted at: <%= journal[:created_at] %></aside>
+    <article>
+      <%= journal.compiled_content %>
+    </article>
+  </div>
+<% end %>
